@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Les 13-3: Dialoog formulier JQ UI</title>
+		<link
+			rel="stylesheet"
+			href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+		<link rel="stylesheet" href="/resources/demos/style.css" />
+		<link rel="stylesheet" href="./styles/les-13-3.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+		<script src="./script/les13-3.js"></script>
+	</head>
+	<body>
+		<div id="dialog-form" title="Maak nieuwe gebruiker aan">
+			<p class="validateTips">Alle velden dienen ingevuld te worden.</p>
+
+			<form>
+				<fieldset>
+					<label for="name">Naam</label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						value="Voornaam Achternaam"
+						class="text ui-widget-content ui-corner-all" />
+					<label for="email">Email</label>
+					<input
+						type="text"
+						name="email"
+						id="email"
+						value="voorbeeld@voorbeeld.nl"
+						class="text ui-widget-content ui-corner-all" />
+					<label for="password">Wachtwoord</label>
+					<input
+						type="password"
+						name="password"
+						id="password"
+						value="xxxxxxx"
+						class="text ui-widget-content ui-corner-all" />
+
+					<input
+						type="submit"
+						tabindex="-1"
+						style="position: absolute; top: -1000px" />
+				</fieldset>
+			</form>
+		</div>
+
+		<div id="users-contain" class="ui-widget">
+			<h1>Gebruikers:</h1>
+			<table id="users" class="ui-widget ui-widget-content">
+				<thead>
+					<tr class="ui-widget-header">
+						<th>Naam</th>
+						<th>Email</th>
+						<th>Wachtwoord</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Jan de Vries</td>
+						<td>jdevries@voorbeeld.nl</td>
+						<td>jdevries1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<button id="create-user">Maak nieuwe gebruiker aan</button>
+	</body>
+</html>
